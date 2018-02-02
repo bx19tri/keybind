@@ -1,0 +1,76 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# AXTCon109 - AX Keyboard with Thumb-Ctrl (based on dotjp.nodoka)
+#
+# T.Eguchi (bx19tri@gmail.com)
+# 2010/12/06 Control by 変換,無変換
+# 2016/04/06 Control by Space
+# 2018/01/31 GRAVE_ACCEN/TILDE by 変換
+
+# -D オプションいらずの決め打ちにする。
+#
+include "109.nodoka"			# 109 キーボード設定
+include "104on109.nodoka"		# 109 キーボードを 104 キーボード風に
+
+# C-AZXCV がしみついてしまった.... no more emacs bindings 
+#
+# include	"default2.nodoka"	# Emacs ライクな設定 notepadのみ
+# include	"default.nodoka"	# Emacs ライクな設定
+
+# Global keymap 設定
+keymap Global
+
+# 以下は、便宜上、設定するもの
+key C-A-D = &DescribeBindings 		# 現在のキーマップのログ出力
+
+
+# 以下に、ご自身の設定を御書き下さい。
+
+# Override 104on109.nodoka
+# 104on109.nodokaでスペースに変更された日本語関連キーを元に戻す
+#
+def subst    *半角/全角	= *半角/全角
+def subst    *無変換	= *無変換
+def subst    *変換	= *変換
+def subst    *ひらがな	= *ひらがな
+def subst    *英数	= *英数
+
+# ESCは、TABの上が好き。
+key *半角/全角 = *Esc
+key *Esc = *半角/全角
+
+# Caps Lock を Control にするのは、default.nodoka にある。
+# default.nodokaのincludeをやめたのでここに追記。
+#
+# mod control += 英数			# 英数を Control に
+# key *英数	= *LControl		#	〃
+#
+# SpaceをControlにしたのでコメントアウト
+
+# スペースをControlにできる。
+# On shot modifire という仕組みを使うと、
+# スペースだけ押して離すとスペースとして機能する
+# !!  スペースのリピート無
+# !!! スペースのリピート有
+# delay-of で指定した回数をリピート開始時に無効にできる
+mod control += !!!Space
+def option delay-of !!! = 6 
+
+# バッククオート＆チルダはTABの上でなくクオートの右（AX/NEWS流）
+# def subst ~S-*CloseBracket	= $GRAVE_ACCENT
+# def subst  S-*CloseBracket	= $TILDE
+#
+# 104と109でほぼ同じとするためには、
+# 上記を妥協して スペースの右に移動する必要がある。
+# 109では残しても良いが移動先になれるために移動元はEnterにしてしまう
+# 相対的に104と同じ場所にEnterがあることになる
+def subst *CloseBracket	= *Enter
+
+# Mac との互換性を考慮して、スペースの右の変換に
+# バッククオート＆チルダを割り当てる
+# (Macbook 2015 US keyboard ならば、右Altがスペースの右)
+#
+# 104でも有効な手段。これを妥協できればキーボードの選択肢
+# が増えるので、慣れたほうが良さそう
+def subst ~S-*変換 = $GRAVE_ACCENT
+def subst  S-*変換 = $TILDE
+

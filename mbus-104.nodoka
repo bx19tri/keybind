@@ -1,0 +1,61 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# mbus-104.nodoka - MacBook US Keyboard Thumb-Ctrl (based on dotjp.nodoka)
+#
+# T.Eguchi (bx19tri@gmail.com)
+# 2018/01/31 
+
+# CapsLockを英数のように動作させるのがどうしてもできない。
+# 解決できない。
+# dot.nodoka -DUSE104on109 で英数の挙動が変わるので、
+# なにかしら方法は有りそうだが見つけられない。
+# 一旦、windows のキーボードドライバを109にして104にリマップする
+# 方法に逃げる。(mbus-109.nodoka でやってみる)
+
+# -D オプションいらずの決め打ちにする。
+#
+include "104.nodoka"			# 104 キーボード設定
+
+# C-AZXCV がしみついてしまった.... no more emacs bindings 
+#
+# include	"default2.nodoka"	# Emacs ライクな設定 notepadのみ
+# include	"default.nodoka"	# Emacs ライクな設定
+
+# Global keymap 設定
+keymap Global
+
+# 以下は、便宜上、設定するもの
+key C-A-D = &DescribeBindings 		# 現在のキーマップのログ出力
+
+# 以下に、ご自身の設定を御書き下さい。
+
+# for 109 keyboard (from 109on104.nodoka)
+def key Hiragana	= 0x70 # ひらがな カタカナ ローマ字
+def key UnderBackSlash	= 0x73 # ＼_
+def key Convert		= 0x79 # 変換(次候補) 前候補 全候補
+def key NonConvert	= 0x7b # 無変換
+def key YenSign		= 0x7d # \|
+
+# ESCは、TABの上が好き。
+key *BackQuote = *Esc
+key *Esc = *BackQuote
+
+# スペースもControlにできる。
+# On shot modifire という仕組みを使うと、
+# スペースだけ押して離すとスペースとして機能する
+# !!  スペースのリピート無
+# !!! スペースのリピート有
+# delay-of で指定した回数をリピート開始時に無効にできる
+mod control += !!!Space
+def option delay-of !!! = 6 
+
+# スペースの右の変換にバッククオート＆チルダを割り当てる
+# Macbook 2015 US keyboard ならば、右Commandがスペースの右
+# Command Key は、bootcamp windows では Windows Key
+key *RWin = *BackQuote
+
+# 104 Keyboard はシフトを併用しないとCapsLockの位置が英数にならない
+# 変換に割当てた上で、Google IME側でEisuに割当てられて機能をHenkanに
+# 再割当てする。
+#
+key *CapsLock = *Convert
+

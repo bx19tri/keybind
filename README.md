@@ -1,4 +1,4 @@
-# 各種環境でのKey bind customize
+# 各種環境でのKey Bind Customize
 
 1980年台後半にNEWSのKeyboardでviを覚えた。
 
@@ -51,7 +51,7 @@ CapsLock以外のキーを再び104にするという方法をとったらうま
 
 ## Windows Bootcamp on Macbook US Keyboard
 
-* Windows 10 設定、言語、オプション、キーボードで101を選んで再ログオン
+* Windows 10 設定、言語、オプション、キーボードで109を選んで再ログオン
 * のどか 設定ファイル: mbus-109.nodoka  
 * 右Win を バッククオート＆チルダ
 * Esc と バッククオート＆チルダ を入れ替え (EscはTabの上)
@@ -64,12 +64,11 @@ CapsLock以外のキーを再び104にするという方法をとったらうま
 * ツール、プロパティ、一般、キー設定の選択「カスタム」を選んで編集ボタンを押す
 * 左下の編集ボタンを押してインポートを選ぶ
 
-## OSX Siera on Macbook US Keyboard
+## macOS Siera on Macbook US Keyboard
 
 * 未解決
-* Karabinier-elements
+* Karabinier-elements を調査すべし
 * 右Alt を バッククオート＆チルダ
 * Esc と バッククオート＆チルダ を入れ替え
 * SandC(Space and Control)
 * CapsLock　でIME制御をどうするか？
-

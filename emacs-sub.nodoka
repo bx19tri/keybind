@@ -1,0 +1,68 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# emacs-sub.nodoka
+# bx19tri@gmail.com 2019/04/03
+#
+# default2.nodoka が emacsedit.nodoka を include していたものを
+# 参考に作成。
+# CTRL+S,CXVZ を残したまま emcas ぽい移動・編集を実現
+# CTRL+A での全選択を残すのは諦めた。行頭への移動を優先
+
+def alias ↑   = Up
+def alias ↓   = Down
+def alias ←   = Left
+def alias →   = Right
+def alias Yen = BackSlash
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Emacs 風移動コマンド
+#
+
+keymap	EmacsMove : Global
+#key Home		= C-Home		# 文頭
+#key End		= C-End			# 文末
+ key C-A = Home		# 行頭
+ key C-E = End		# 行末
+ key C-B = Left		# ←
+ key C-F = Right	# →
+ key C-N = Down		# ↓
+ key C-P = Up		# ↑
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Emacs 風編集コマンド
+#
+
+keyseq	$EmacsEdit/kill-line = &EmacsEditKillLineFunc S-End C-X \
+			&Sync &EmacsEditKillLinePred((Delete), (Return Left))
+
+keymap	EmacsEdit : EmacsMove
+ key C-D      = Delete			# 削除
+ key C-H      = BackSpace		# BS
+ key C-K      = $EmacsEdit/kill-line	# 行末まで削除
+ key C-M      = Return			# RETURN
+ key C-W      = C-X			# CUT
+ key C-Y      = C-V			# PASTE
+ key C-Slash  = C-Z			# UNDO
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# コントロールの設定
+#
+
+window  EditControl     /:(Edit|TEdit|RichEdit(20[AW])?)$/ : EmacsEdit
+window  SysListView32   /:SysListView32$/ : EmacsMove
+window  SysTreeView32   /:SysTreeView32$/ : EmacsMove
+window  ComboBox        /:ComboBox(:Edit)?$/ : EmacsEdit
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 各アプリケーションの設定
+#
+
+# Notepad
+window  Notepad /:Notepad:Edit$/ : EmacsEdit
+
+# Thunderbird
+window  Thunderbird /:MozillaWindowClass$/ : EmacsEdit
+
+# Chrome
+window  ChromeAddress /:Chrome_WidgetWin_1$/ : EmacsEdit
+window  ChromeBody    /:Chrome_RenderWidgetHostHWND$/ : EmacsEdit
+

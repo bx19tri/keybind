@@ -2,23 +2,14 @@
 # mbus-104.nodoka - MacBook US Keyboard Thumb-Ctrl (based on dotjp.nodoka)
 #
 # T.Eguchi (bx19tri@gmail.com)
-# 2018/01/31 
-
-# CapsLockを英数のように動作させるのがどうしてもできない。
-# 解決できない。
-# dot.nodoka -DUSE104on109 で英数の挙動が変わるので、
-# なにかしら方法は有りそうだが見つけられない。
-# 一旦、windows のキーボードドライバを109にして104にリマップする
-# 方法に逃げる。(mbus-109.nodoka でやってみる)
+# 2019/04/03 
 
 # -D オプションいらずの決め打ちにする。
 #
 include "104.nodoka"			# 104 キーボード設定
 
-# C-AZXCV がしみついてしまった.... no more emacs bindings 
-#
-# include	"default2.nodoka"	# Emacs ライクな設定 notepadのみ
-# include	"default.nodoka"	# Emacs ライクな設定
+# C-AZXCV を残した subset emacs binding
+include	"emacs-sub.nodoka"
 
 # Global keymap 設定
 keymap Global
@@ -37,7 +28,7 @@ def key YenSign		= 0x7d # \|
 
 # ESCは、TABの上が好き。
 key *BackQuote = *Esc
-key *Esc = *BackQuote
+#key *Esc = *BackQuote
 
 # スペースもControlにできる。
 # On shot modifire という仕組みを使うと、
@@ -53,9 +44,12 @@ def option delay-of !!! = 6
 # Command Key は、bootcamp windows では Windows Key
 key *RWin = *BackQuote
 
-# 104 Keyboard はシフトを併用しないとCapsLockの位置が英数にならない
-# 変換に割当てた上で、Google IME側でEisuに割当てられて機能をHenkanに
-# 再割当てする。
+# 英数/CapsLock 反転
 #
-key *CapsLock = *Convert
+def subst ~S-Caps =  S-Caps
+def subst  S-Caps = ~S-Caps
+
+# CTRL+J で ESC
+def subst C-S-J = C-J
+def subst C-J   = Esc
 

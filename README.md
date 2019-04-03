@@ -19,31 +19,25 @@ Macbook 2015 購入時にUS Keyboard版を購入。
 * のどかのようなソフトの調査が面倒
 * 単純なキーの入れ替えでは記号の再配置ができない
 * Controlの位置変更はOSだけでできる
+* JP Keyboard には、1 の左にキーがない
 
 が理由だった。  
 が、BackQuote と Esc の再配置が解決できず悩み続ける。
 
 その後、Windows+remapped 109 で BackQuote の位置を妥協すれば、
-各環境でほぼおなじにできることに気がついた。
+各環境でほぼ同じにできることに気がついた。
 
 BackQuote の解決とは非同期だが、Controlは右小指より左右親指が
 より快適と思い最終的にSandCにした。  
 
 副次的に気付かされたが、英数でIME Onと入力文字種選択ができるのは快適。
-ただしこの動作はMS IMEとその動作を模したGoogle IMEが実施しているもの。
-Google IMEでは、同じ場所のキーを109では英数、
-104ではCapsLockとして扱い同じ動作とならない。  
-dot.nodoka -DUSE104on109 でキーの挙動が変わるので、
-のどかで動作変更する方法がありそう。だが見つけきれていない。
+US キーボードでは、Caps/英数 となりシフトキーでの修飾が、109 とは逆に
+なるので注意。
 
-次善の策として、MacのWindows10の設定で109キーボードドライバを選び、
-CapsLock以外のキーを再び104にするという方法をとったらうまくいった。
-
-https://support.hp.com/jp-ja/document/c03458274
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters
-OverrideKeyboardIdentifier
-というレジストリキーがある。
-これをキーワードに検索するといろいろ出てくる
+のどかで CTRL+J を ESC に変更することはできた。
+Google IME でもESCが押されたと認識する。  
+ESC キーを使わない事になれることができれば、1の左を BackQuote とする
+運用に変えることもできる。  
 
 ## Windows w/109 Keyboard
 
@@ -52,15 +46,17 @@ OverrideKeyboardIdentifier
 * む　　をエンター (Lからの相対位置を各環境でそろえる)
 * ろ　　を右シフト (?からの相対位置を各環境でそろえる)
 * 変換　をバッククオート＆チルダ
-* Esc と 半角/全角 を入れ替え (EscはTabの上)
+* 半角/全角 を ESC
+* CTRL+J を ESC
 * SandC(Space and Control)
 
 ## Windows Bootcamp on Macbook US Keyboard
 
-* Windows 10 設定、言語、オプション、キーボードで109を選んで再ログオン
-* のどか 設定ファイル: mbus-109.nodoka  
+* のどか 設定ファイル: mbus-104.nodoka  
 * 右Win を バッククオート＆チルダ
-* Esc と バッククオート＆チルダ を入れ替え (EscはTabの上)
+* バッククオート＆チルダ を ESC
+* CTRL+J を ESC
+* CapsLock を 英数、英数を CapsLock
 * SandC(Space and Control)
 
 ## Google IME
@@ -75,6 +71,7 @@ OverrideKeyboardIdentifier
 * 未解決
 * Karabinier-elements を調査すべし
 * 右Alt を バッククオート＆チルダ
-* Esc と バッククオート＆チルダ を入れ替え
+* バッククオート＆チルダ を ESC
 * SandC(Space and Control)
-* CapsLock　でIME制御をどうするか？
+* CapsLock での IME制御をどうするか？を検討すべき
+

@@ -5,16 +5,16 @@
 # 2010/12/06 Control by 変換,無変換
 # 2016/04/06 Control by Space
 # 2018/01/31 GRAVE_ACCEN/TILDE by 変換
+# 2019/01/30 かな → Esc
+# 2019/04/03 CTRL+J → Esc
 
 # -D オプションいらずの決め打ちにする。
 #
 include "109.nodoka"			# 109 キーボード設定
 include "104on109.nodoka"		# 109 キーボードを 104 キーボード風に
 
-# C-AZXCV がしみついてしまった.... no more emacs bindings 
-#
-# include	"default2.nodoka"	# Emacs ライクな設定 notepadのみ
-# include	"default.nodoka"	# Emacs ライクな設定
+# C-AZXCV を残した subset emacs binding
+include	"emacs-sub.nodoka"
 
 # Global keymap 設定
 keymap Global
@@ -22,7 +22,7 @@ keymap Global
 # 以下は、便宜上、設定するもの
 key C-A-D = &DescribeBindings 		# 現在のキーマップのログ出力
 
-
+################################################################
 # 以下に、ご自身の設定を御書き下さい。
 
 # Override 104on109.nodoka
@@ -36,15 +36,18 @@ def subst    *英数	= *英数
 
 # ESCは、TABの上が好き。
 key *半角/全角 = *Esc
-key *Esc = *半角/全角
+#key *Esc = *半角/全角
+
+# ひらがなもESCにする。
+# US Keyboard を考慮して、チルダを移動せずにESCを移動する布石。
+def subst *ひらがな	= *Esc
 
 # Caps Lock を Control にするのは、default.nodoka にある。
 # default.nodokaのincludeをやめたのでここに追記。
+# mod control += 英数     # 英数を Control に
+# key *英数	= *LControl   #	〃
 #
-# mod control += 英数			# 英数を Control に
-# key *英数	= *LControl		#	〃
-#
-# SpaceをControlにしたのでコメントアウト
+# スペースをControlにしたので、上記をコメントアウトした
 
 # スペースをControlにできる。
 # On shot modifire という仕組みを使うと、
@@ -65,12 +68,32 @@ def option delay-of !!! = 6
 # 相対的に104と同じ場所にEnterがあることになる
 def subst *CloseBracket	= *Enter
 
-# Mac との互換性を考慮して、スペースの右の変換に
-# バッククオート＆チルダを割り当てる
-# (Macbook 2015 US keyboard ならば、右Altがスペースの右)
+# 右シフトの左の「ろ」は、104on109.nodoka の最後で shift に
+# 変更されている。このファイル内ではなにもしていない。
+
+# Enter を BS, BS をチルダ (HHKと同じ位置)
+# def subst *Enter = *BS
+# def subst ~S-*BS = $GRAVE_ACCENT
+# def subst  S-*BS = $TILDE
 #
-# 104でも有効な手段。これを妥協できればキーボードの選択肢
-# が増えるので、慣れたほうが良さそう
+# HHK を使い分ける予定は無いので、上記はコメントアウトした
+
+# Mac との互換性を考慮して、スペースの右の変換にバッククオート＆チルダを
+# 割り当てる。 (Macbook 2015 US keyboard ならば、右Altがスペースの右)
+#
+# 104でも有効な手段。これを妥協できればキーボードの選択肢が増えるので、
+# 慣れたほうが良い。
 def subst ~S-*変換 = $GRAVE_ACCENT
 def subst  S-*変換 = $TILDE
+
+# 英数/CapsLock 反転のテスト (MBUS向けを109でデバッグ)
+#
+# def subst ~S-英数 =  S-英数
+# def subst  S-英数 = ~S-英数
+# def subst ~S-Caps =  S-Caps
+# def subst  S-Caps = ~S-Caps
+
+# CTRL+J で ESC
+def subst C-S-J = C-J
+def subst C-J   = Esc
 

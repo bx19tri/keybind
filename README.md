@@ -39,6 +39,12 @@ dot.nodoka -DUSE104on109 でキーの挙動が変わるので、
 次善の策として、MacのWindows10の設定で109キーボードドライバを選び、
 CapsLock以外のキーを再び104にするという方法をとったらうまくいった。
 
+https://support.hp.com/jp-ja/document/c03458274
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters
+OverrideKeyboardIdentifier
+というレジストリキーがある。
+これをキーワードに検索するといろいろ出てくる
+
 ## Windows w/109 Keyboard
 
 * のどか 設定ファイル: AXTCon109.nodoka  

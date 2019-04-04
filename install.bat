@@ -1,3 +1,5 @@
 nkf --overwrite --oc=UTF-8 *.nodoka
-copy *.nodoka *.txt %USERPROFILE%
+copy *.nodoka %USERPROFILE%
+copy *.txt    %USERPROFILE%
+pause
 

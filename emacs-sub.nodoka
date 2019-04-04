@@ -2,49 +2,52 @@
 # emacs-sub.nodoka
 # bx19tri@gmail.com 2019/04/03
 #
-# default2.nodoka ‚ª emacsedit.nodoka ‚ğ include ‚µ‚Ä‚¢‚½‚à‚Ì‚ğ
-# Ql‚Éì¬B
-# CTRL+S,CXVZ ‚ğc‚µ‚½‚Ü‚Ü emcas ‚Û‚¢ˆÚ“®E•ÒW‚ğÀŒ»
-# CTRL+A ‚Å‚Ì‘S‘I‘ğ‚ğc‚·‚Ì‚Í’ú‚ß‚½Bs“ª‚Ö‚ÌˆÚ“®‚ğ—Dæ
+# default2.nodoka ãŒ emacsedit.nodoka ã‚’ include ã—ã¦ã„ãŸã‚‚ã®ã‚’
+# å‚è€ƒã«ä½œæˆã€‚
+# CTRL+S,CXVZ ã‚’æ®‹ã—ãŸã¾ã¾ emcas ã½ã„ç§»å‹•ãƒ»ç·¨é›†ã‚’å®Ÿç¾
+# CTRL+A ã§ã®å…¨é¸æŠã‚’æ®‹ã™ã®ã¯è«¦ã‚ãŸã€‚è¡Œé ­ã¸ã®ç§»å‹•ã‚’å„ªå…ˆ
+# CTRL+F ã§ã®ã‚µãƒ¼ãƒã‚‚è«¦ã‚ãŸã€‚F3 ã§ä»£ç”¨ã™ã‚‹
 
-def alias ª   = Up
-def alias «   = Down
-def alias ©   = Left
-def alias ¨   = Right
+def alias â†‘   = Up
+def alias â†“   = Down
+def alias â†   = Left
+def alias â†’   = Right
 def alias Yen = BackSlash
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Emacs •—ˆÚ“®ƒRƒ}ƒ“ƒh
+# Emacs é¢¨ç§»å‹•ã‚³ãƒãƒ³ãƒ‰
 #
 
 keymap	EmacsMove : Global
-#key Home		= C-Home		# •¶“ª
-#key End		= C-End			# •¶––
- key C-A = Home		# s“ª
- key C-E = End		# s––
- key C-B = Left		# ©
- key C-F = Right	# ¨
- key C-N = Down		# «
- key C-P = Up		# ª
+#key Home     = C-Home			# æ–‡é ­
+#key End      = C-End			# æ–‡æœ«
+ key C-A      = Home			# è¡Œé ­
+ key C-E      = End			# è¡Œæœ«
+ key C-B      = Left			# â†
+ key C-F      = Right			# â†’
+ key C-N      = Down			# â†“
+ key C-P      = Up			# â†‘
+ key C-S-A    = C-A     		# Select All 
+ key C-S-F    = C-F     		# Search
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Emacs •—•ÒWƒRƒ}ƒ“ƒh
+# Emacs é¢¨ç·¨é›†ã‚³ãƒãƒ³ãƒ‰
 #
 
 keyseq	$EmacsEdit/kill-line = &EmacsEditKillLineFunc S-End C-X \
 			&Sync &EmacsEditKillLinePred((Delete), (Return Left))
 
 keymap	EmacsEdit : EmacsMove
- key C-D      = Delete			# íœ
+ key C-D      = Delete			# å‰Šé™¤
  key C-H      = BackSpace		# BS
- key C-K      = $EmacsEdit/kill-line	# s––‚Ü‚Åíœ
+ key C-K      = $EmacsEdit/kill-line	# è¡Œæœ«ã¾ã§å‰Šé™¤
  key C-M      = Return			# RETURN
  key C-W      = C-X			# CUT
  key C-Y      = C-V			# PASTE
  key C-Slash  = C-Z			# UNDO
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# ƒRƒ“ƒgƒ[ƒ‹‚Ìİ’è
+# ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®è¨­å®š
 #
 
 window  EditControl     /:(Edit|TEdit|RichEdit(20[AW])?)$/ : EmacsEdit
@@ -53,7 +56,7 @@ window  SysTreeView32   /:SysTreeView32$/ : EmacsMove
 window  ComboBox        /:ComboBox(:Edit)?$/ : EmacsEdit
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Ìİ’è
+# å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®è¨­å®š
 #
 
 # Notepad

@@ -7,6 +7,7 @@
 # 2018/01/31 GRAVE_ACCEN/TILDE by 変換
 # 2019/01/30 かな → Esc
 # 2019/04/03 CTRL+J → Esc
+# 2019/04/23 半角/全角 → バッククオート＆チルダ
 
 # -D オプションいらずの決め打ちにする。
 #
@@ -35,12 +36,10 @@ def subst    *ひらがな	= *ひらがな
 def subst    *英数	= *英数
 
 # ESCは、TABの上が好き。
-key *半角/全角 = *Esc
-#key *Esc = *半角/全角
-
-# ひらがなもESCにする。
-# US Keyboard を考慮して、チルダを移動せずにESCを移動する布石。
-def subst *ひらがな	= *Esc
+# key *半角/全角 = *Esc  
+# 
+# US Keyboard にあわせて「バッククオート＆チルダ」にすることにした
+# ので、上記をコメントアウト。リマップは後半で実施(2019/04/23)
 
 # Caps Lock を Control にするのは、default.nodoka にある。
 # default.nodokaのincludeをやめたのでここに追記。
@@ -56,7 +55,7 @@ def subst *ひらがな	= *Esc
 # !!! スペースのリピート有
 # delay-of で指定した回数をリピート開始時に無効にできる
 mod control += !!!Space
-def option delay-of !!! = 6 
+def option delay-of !!! = 20 
 
 # バッククオート＆チルダはTABの上でなくクオートの右（AX/NEWS流）
 # def subst ~S-*CloseBracket	= $GRAVE_ACCENT
@@ -83,8 +82,14 @@ def subst *CloseBracket	= *Enter
 #
 # 104でも有効な手段。これを妥協できればキーボードの選択肢が増えるので、
 # 慣れたほうが良い。
-def subst ~S-*変換 = $GRAVE_ACCENT
-def subst  S-*変換 = $TILDE
+# def subst ~S-*変換 = $GRAVE_ACCENT
+# def subst  S-*変換 = $TILDE
+#
+# ESC を Ctrl-J で代用するめどがついたので、上記をコメントアウト。
+# US Keyboard でのカスタマイズを減らす事も考慮して、
+# 1 の左をチルダにする (2019/04/23)
+def subst ~S-*半角/全角 = $GRAVE_ACCENT
+def subst  S-*半角/全角 = $TILDE
 
 # 英数/CapsLock 反転のテスト (MBUS向けを109でデバッグ)
 #
@@ -93,7 +98,7 @@ def subst  S-*変換 = $TILDE
 # def subst ~S-Caps =  S-Caps
 # def subst  S-Caps = ~S-Caps
 
-# CTRL+J で ESC
+# CTRL+J で ESC (2019/04/03)
 def subst C-S-J = C-J
 def subst C-J   = Esc
 

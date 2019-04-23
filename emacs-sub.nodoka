@@ -7,6 +7,12 @@
 # CTRL+S,CXVZ を残したまま emcas ぽい移動・編集を実現
 # CTRL+A での全選択を残すのは諦めた。行頭への移動を優先
 # CTRL+F でのサーチも諦めた。F3 で代用する
+#
+# CTRL+SHIFT-A で、CTRL+A を入力できる。CTRL+SHIFT+A の入力はできなくなった
+# CTRL+SHIFT-F で、CTRL+F を入力できる。CTRL+SHIFT+F の入力はできなくなった
+#
+# Edit Control で emacs っぽいキーバインドに変更されるアプリを
+# Notepad, Thunderbird, Chrome に限った。
 
 def alias ↑   = Up
 def alias ↓   = Down

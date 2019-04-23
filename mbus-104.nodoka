@@ -27,8 +27,11 @@ def key NonConvert	= 0x7b # 無変換
 def key YenSign		= 0x7d # \|
 
 # ESCは、TABの上が好き。
-key *BackQuote = *Esc
-#key *Esc = *BackQuote
+# key *BackQuote = *Esc
+# key *Esc = *BackQuote
+#
+# CTRL+J での ESC になれた。このキーのリマップをやめる
+# (2019/04/23)
 
 # スペースもControlにできる。
 # On shot modifire という仕組みを使うと、
@@ -37,12 +40,15 @@ key *BackQuote = *Esc
 # !!! スペースのリピート有
 # delay-of で指定した回数をリピート開始時に無効にできる
 mod control += !!!Space
-def option delay-of !!! = 6 
+def option delay-of !!! = 20
 
 # スペースの右の変換にバッククオート＆チルダを割り当てる
 # Macbook 2015 US keyboard ならば、右Commandがスペースの右
 # Command Key は、bootcamp windows では Windows Key
-key *RWin = *BackQuote
+# key *RWin = *BackQuote
+#
+# CTRL+J での ESC になれた。このキーのリマップをやめる
+# (2019/04/23)
 
 # 英数/CapsLock 反転
 #

@@ -7,14 +7,14 @@
 * Control はAの左、Tabの下
 * BackQuote/Tilde は、Quoteの右、CloseBracket の下
 
-が理想。
+が理想だった。
 [AX Keyboardも同じ配列](https://upload.wikimedia.org/wikipedia/commons/d/d7/KB_Japanese_AX_keyboard.svg)
 だったが現在では入手不能。  
 Windwos であれば、109 Keyboardを
 [のどか](http://www.appletkan.com/nodoka.htm)
 でリマップすれば完璧。
 
-Macbook 2015 購入時にUS Keyboard版を購入。
+MacBook 2015 購入時にUS Keyboard版を購入。
 
 * のどかのようなソフトの調査が面倒
 * 単純なキーの入れ替えでは記号の再配置ができない
@@ -28,7 +28,8 @@ Macbook 2015 購入時にUS Keyboard版を購入。
 各環境でほぼ同じにできることに気がついた。
 
 BackQuote の解決とは非同期だが、Controlは右小指より左右親指が
-より快適と思い最終的にSandCにした。  
+より快適と思い最終的に SandS をヒントとして
+SandC(Space and Control) にした。 
 
 副次的に気付かされたが、英数でIME Onと入力文字種選択ができるのは快適。
 US キーボードでは、Caps/英数 となりシフトキーでの修飾が、109 とは逆に
@@ -36,37 +37,48 @@ US キーボードでは、Caps/英数 となりシフトキーでの修飾が�
 
 のどかで CTRL+J を ESC に変更することはできた。
 Google IME でもESCが押されたと認識する。  
-ESC キーを使わない事になれることができれば、1の左を BackQuote とする
-運用に変えることもできる。  
+ESC キーを使わない事になれることができれば、1 の左を BackQuote とする
+運用に変えることもできる。(2019/04/03 追記)  
+
+1 の左を BackQuote とすることを始めた。(2019/04/23 追記)    
+無変換・変換・ひらがな の3キーへのリマップをやめた。
+将来の新しい用途へのリマップが可能な状態。CTRL-AF は候補となりうる。
 
 ## Windows w/109 Keyboard
 
 * のどか 設定ファイル: AXTCon109.nodoka  
-* 109キーボードで101配列
-* む　　をエンター (Lからの相対位置を各環境でそろえる)
-* ろ　　を右シフト (?からの相対位置を各環境でそろえる)
-* 変換　をバッククオート＆チルダ
-* 半角/全角 を ESC
-* CTRL+J を ESC
+* 109キーボードで104配列
+* む　　    をエンター (Lからの相対位置を各環境でそろえる)
+* ろ　　    を右シフト (?からの相対位置を各環境でそろえる)
+* 半角/全角 を バッククオート＆チルダ
+* CTRL+J    を ESC
 * SandC(Space and Control)
 
-## Windows Bootcamp on Macbook US Keyboard
+## Windows Bootcamp on MacBook US Keyboard
 
 * のどか 設定ファイル: mbus-104.nodoka  
 * 右Win を バッククオート＆チルダ
 * バッククオート＆チルダ を ESC
-* CTRL+J を ESC
-* CapsLock を 英数、英数を CapsLock
+* CapsLock を 英数、英数を CapsLock (シフト状態反転)
 * SandC(Space and Control)
+* CTRL+J を ESC
+
+## 編集領域で emacs 風キーバインド (emacs-sub.nodoka)   
+
+* のどか ならでは。Karabinier-elements では調査・追求しない
+* Windows 標準の CTRL-CXVZ は残した
+* Windows 標準の CTRL-AF は置き換えてしまった
+* CTRL-AENPFB/DHK/Y で移動・削除・ペースト
+* 対象アプリは、標準エディットコントロール/Notead/Thunderbird/Chrome
 
 ## Google IME
 
 * Windows用設定ファイル: gime-keymap-esc.txt
-* どんな状態でもEscで無変換状態にする。vi のために
+* どんな状態でも ESC で無変換状態にする。vi のために
 * ツール、プロパティ、一般、キー設定の選択「カスタム」を選んで編集ボタンを押す
 * 左下の編集ボタンを押してインポートを選ぶ
 
-## macOS Siera on Macbook US Keyboard
+## macOS on MacBook US Keyboard
 
 * 未解決
 * Karabinier-elements を調査すべし

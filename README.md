@@ -82,8 +82,7 @@ ESC キーを使わない事になれることができれば、1 の左を Back
 
 * 未解決
 * Karabinier-elements を調査すべし
-* 右Alt を バッククオート＆チルダ
-* バッククオート＆チルダ を ESC
 * SandC(Space and Control)
+* CTRL-J を ESC に入れ替える
 * CapsLock での IME制御をどうするか？を検討すべき
-
+* Mac 向け Google IME で、英数で漢字変換開始できるのか？

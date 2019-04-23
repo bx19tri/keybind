@@ -28,7 +28,6 @@ Composition	Ctrl Left	MoveCursorToBeginning
 Composition	Ctrl Up	MoveCursorToBeginning
 Composition	Home	MoveCursorToBeginning
 Composition	Ctrl z	Cancel
-Composition	ESC	Cancel
 Composition	Shift ESC	Cancel
 Conversion	Backspace	Cancel
 Conversion	Ctrl Backspace	Cancel
@@ -36,7 +35,6 @@ Conversion	Ctrl g	Cancel
 Conversion	Ctrl h	Cancel
 Conversion	Ctrl z	Cancel
 Conversion	Delete	Cancel
-Conversion	ESC	Cancel
 Conversion	Shift Backspace	Cancel
 Conversion	Shift ESC	Cancel
 Composition	Muhenkan	SwitchKanaType

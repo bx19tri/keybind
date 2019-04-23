@@ -39,7 +39,7 @@ def key YenSign		= 0x7d # \|
 # !!  スペースのリピート無
 # !!! スペースのリピート有
 # delay-of で指定した回数をリピート開始時に無効にできる
-mod control += !!!Space
+mod control += !!Space
 def option delay-of !!! = 20
 
 # スペースの右の変換にバッククオート＆チルダを割り当てる

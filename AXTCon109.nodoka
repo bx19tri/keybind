@@ -54,7 +54,7 @@ def subst    *英数	= *英数
 # !!  スペースのリピート無
 # !!! スペースのリピート有
 # delay-of で指定した回数をリピート開始時に無効にできる
-mod control += !!!Space
+mod control += !!Space
 def option delay-of !!! = 20 
 
 # バッククオート＆チルダはTABの上でなくクオートの右（AX/NEWS流）

@@ -65,7 +65,7 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 
 ## Windows w/109 Keyboard
 
-* のどか 設定ファイル: [SancC104on109.nodoka](SancC104on109.nodoka)
+* のどか 設定ファイル: SancC104on109.nodoka
 * 109キーボードで104配列
 * SandC(Space and Control)
 * む　　    をエンター (Lからの相対位置を各環境でそろえる)
@@ -76,7 +76,7 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 
 ## Windows Bootcamp on MacBook US Keyboard
 
-* のどか 設定ファイル: [mbus-104.nodoka](mbus-104.nodoka)
+* のどか 設定ファイル: mbus-104.nodoka
 * SandC(Space and Control)
 * CapsLock を 英数、英数を CapsLock (シフト状態反転)
 * CTRL+J   を Esc
@@ -84,8 +84,8 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 
 ## 編集領域で emacs 風キーバインド
 
+* のどか 設定ファイル: emacs-sub.nodoka
 * のどか ならでは機能。Karabinier-elements では調査・追求しない
-* のどか 設定ファイル: [emacs-sub.nodoka](emacs-sub.nodoka)   
 * Windows 標準の CTRL-CXVZ は残した
 * Windows 標準の CTRL-AF は置き換えてしまった
 * CTRL-AENPFB/DHK/Y で移動・削除・ペースト
@@ -93,7 +93,7 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 
 ## Google IME
 
-* Windows用設定ファイル: [gime-keymap-esc.txt](gime-keymap-esc.txt)
+* Windows用設定ファイル: gime-keymap-esc.txt
 * 6種類の状態で Esc で無変換状態にする。vi との親和性高い。
 * ツール、プロパティ、一般、キー設定の選択「カスタム」を選んで編集ボタンを押す
 * 左下の編集ボタンを押してインポートを選ぶ

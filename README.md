@@ -1,4 +1,4 @@
-# 各種環境でのKey Bind Customize
+# 各種環境での Key Bind Customize
 
 1980年台後半にNEWSのKeyboardでviを覚えた。
 
@@ -36,32 +36,40 @@ US キーボードでは、Caps/英数 となりシフトキーでの修飾が�
 なるので注意。
 
 のどかで CTRL+J を ESC に変更することはできた。
-Google IME でもESCが押されたと認識する。  
-ESC キーを使わない事になれることができれば、1 の左を BackQuote とする
-運用に変えることもできる。(2019/04/03 追記)  
+Google IME でも ESC が押されたと認識する。  
+ESC キーを使わない事になれることができれば、
+1 の左を BackQuote とする運用に変えることもできる。(2019/04/03 追記)  
 
-1 の左を BackQuote とすることを始めた。(2019/04/23 追記)    
+1 の左を BackQuote とすることを始めた。
 無変換・変換・ひらがな の3キーへのリマップをやめた。
-将来の新しい用途へのリマップが可能な状態。CTRL-AF は候補となりうる。
+将来の新しい用途へのリマップが可能な状態。
+CTRL-AF は候補となりうる。(2019/04/23 追記)    
+
+変換候補表示時などに、CTRL+J が ESC にならない場合がある。
+保険として、スペースの右のキーを ESC にしておく事にした。(2019/04/24 追記)    
+
+AXTCon109 というファイル名を SandC104on109 に変更した。
+いろいろな変更を経て、AX 配列から乖離して 104 とほとんど同じになったのが理由。
+(2019/04/24 追記)    
 
 ## Windows w/109 Keyboard
 
-* のどか 設定ファイル: AXTCon109.nodoka  
+* のどか 設定ファイル: SancC104on109.nodoka  
 * 109キーボードで104配列
+* SandC(Space and Control)
 * む　　    をエンター (Lからの相対位置を各環境でそろえる)
 * ろ　　    を右シフト (?からの相対位置を各環境でそろえる)
 * 半角/全角 を バッククオート＆チルダ
 * CTRL+J    を ESC
-* SandC(Space and Control)
+* 変換      を ESC
 
 ## Windows Bootcamp on MacBook US Keyboard
 
 * のどか 設定ファイル: mbus-104.nodoka  
-* 右Win を バッククオート＆チルダ
-* バッククオート＆チルダ を ESC
-* CapsLock を 英数、英数を CapsLock (シフト状態反転)
 * SandC(Space and Control)
-* CTRL+J を ESC
+* CapsLock を 英数、英数を CapsLock (シフト状態反転)
+* CTRL+J   を ESC
+* 右Win    を ESC
 
 ## 編集領域で emacs 風キーバインド (emacs-sub.nodoka)   
 
@@ -80,9 +88,8 @@ ESC キーを使わない事になれることができれば、1 の左を Back
 
 ## macOS on MacBook US Keyboard
 
-* 未解決
-* Karabinier-elements を調査すべし
+* 未解決。Karabinier-elements を調査すべし
 * SandC(Space and Control)
-* CTRL-J を ESC に入れ替える
+* CTRL-J を ESC
 * CapsLock での IME制御をどうするか？を検討すべき
 * Mac 向け Google IME で、英数で漢字変換開始できるのか？

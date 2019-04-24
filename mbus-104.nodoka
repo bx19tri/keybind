@@ -3,6 +3,7 @@
 #
 # T.Eguchi (bx19tri@gmail.com)
 # 2019/04/03 
+# 2019/04/23 Esc by CTRL-J
 
 # -D オプションいらずの決め打ちにする。
 #
@@ -26,11 +27,11 @@ def key Convert		= 0x79 # 変換(次候補) 前候補 全候補
 def key NonConvert	= 0x7b # 無変換
 def key YenSign		= 0x7d # \|
 
-# ESCは、TABの上が好き。
+# Escは、TABの上が好き。
 # key *BackQuote = *Esc
 # key *Esc = *BackQuote
 #
-# CTRL+J での ESC になれた。このキーのリマップをやめる
+# CTRL+J での Esc になれた。このキーのリマップをやめる
 # (2019/04/23)
 
 # スペースもControlにできる。
@@ -47,7 +48,7 @@ def option delay-of !!! = 20
 # Command Key は、bootcamp windows では Windows Key
 # key *RWin = *BackQuote
 #
-# CTRL+J での ESC になれた。このキーのリマップをやめる
+# CTRL+J での Esc になれた。このキーのリマップをやめる
 # (2019/04/23)
 
 # 英数/CapsLock 反転
@@ -55,7 +56,8 @@ def option delay-of !!! = 20
 def subst ~S-Caps =  S-Caps
 def subst  S-Caps = ~S-Caps
 
-# CTRL+J で ESC
-def subst C-S-J = C-J
-def subst C-J   = Esc
+# CTRL+J で Esc
+# 念の為、スペースキーの直右も Esc
+def subst C-*J = Esc
+key *RWin      = Esc 
 

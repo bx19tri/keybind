@@ -49,9 +49,6 @@ def subst    *英数	= *英数
 # key *英数	= *LControl   #	〃
 #
 # スペースをControlにしたので、上記をコメントアウトした
-# 
-# CTRL+J での Esc が完璧ではないので、Esc を追加
-key *変換 = *Esc  
 
 # スペースをControlにできる。
 # On shot modifire という仕組みを使うと、
@@ -104,5 +101,7 @@ def subst  S-*半角/全角 = $TILDE
 # def subst  S-Caps = ~S-Caps
 
 # CTRL+J で Esc (2019/04/03)
+# 念の為、スペースキーの直右も Esc (2019/04/24)
 def subst C-*J   = Esc
+key *変換 = *Esc  
 

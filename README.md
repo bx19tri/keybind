@@ -12,7 +12,7 @@
 だったが現在では入手不能。  
 Windwos であれば、109 Keyboardを
 [のどか](http://www.appletkan.com/nodoka.htm)
-でリマップすれば完璧。  
+でリマップすれば完璧。(過去には mayu や猫招きも利用)  
 そのため、PC では 104 キーボードを選択したことはなかった。
 
 MacBook 2015 購入時に US Keyboard 版を購入。

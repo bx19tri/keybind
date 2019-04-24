@@ -1,5 +1,7 @@
 # 各種環境での Key Bind Customize
 
+[https://github.com/bx19tri/keybind](https://github.com/bx19tri/keybind)
+
 1980 年台後半に NEWS の Keyboard で vi を覚えた。
 
 * 記号はASCII配置
@@ -11,7 +13,7 @@
 [AX Keyboardも同じ配列](https://upload.wikimedia.org/wikipedia/commons/d/d7/KB_Japanese_AX_keyboard.svg)
 だったが現在では入手不能。  
 Windwos であれば、109 Keyboardを
-[のどか](http://www.appletkan.com/nodoka.htm)
+[のどか](https://appletllc.com/web/nodoka.htm)
 でリマップすれば完璧。(過去には mayu や猫招きも利用)  
 そのため、PC では 104 キーボードを選択したことはなかった。
 

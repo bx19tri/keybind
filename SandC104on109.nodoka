@@ -1,13 +1,15 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# AXTCon109 - AX Keyboard with Thumb-Ctrl (based on dotjp.nodoka)
+# SandC104on109
 #
 # T.Eguchi (bx19tri@gmail.com)
 # 2010/12/06 Control by 変換,無変換
 # 2016/04/06 Control by Space
 # 2018/01/31 GRAVE_ACCEN/TILDE by 変換
-# 2019/01/30 かな → Esc
-# 2019/04/03 CTRL+J → Esc
+# 2019/01/30 かな      → Esc
+# 2019/04/03 CTRL+J    → Esc
 # 2019/04/23 半角/全角 → バッククオート＆チルダ
+# 2019/04/23 変換      → Esc
+# 2019/04/24 AXTCon109(AX Keyboard with Thumb-Ctrl) からフィアル名を変更
 
 # -D オプションいらずの決め打ちにする。
 #
@@ -35,7 +37,7 @@ def subst    *変換	= *変換
 def subst    *ひらがな	= *ひらがな
 def subst    *英数	= *英数
 
-# ESCは、TABの上が好き。
+# Escは、TABの上が好き。
 # key *半角/全角 = *Esc  
 # 
 # US Keyboard にあわせて「バッククオート＆チルダ」にすることにした
@@ -47,6 +49,9 @@ def subst    *英数	= *英数
 # key *英数	= *LControl   #	〃
 #
 # スペースをControlにしたので、上記をコメントアウトした
+# 
+# CTRL+J での Esc が完璧ではないので、Esc を追加
+key *変換 = *Esc  
 
 # スペースをControlにできる。
 # On shot modifire という仕組みを使うと、
@@ -85,7 +90,7 @@ def subst *CloseBracket	= *Enter
 # def subst ~S-*変換 = $GRAVE_ACCENT
 # def subst  S-*変換 = $TILDE
 #
-# ESC を Ctrl-J で代用するめどがついたので、上記をコメントアウト。
+# Esc を Ctrl-J で代用するめどがついたので、上記をコメントアウト。
 # US Keyboard でのカスタマイズを減らす事も考慮して、
 # 1 の左をチルダにする (2019/04/23)
 def subst ~S-*半角/全角 = $GRAVE_ACCENT
@@ -98,7 +103,6 @@ def subst  S-*半角/全角 = $TILDE
 # def subst ~S-Caps =  S-Caps
 # def subst  S-Caps = ~S-Caps
 
-# CTRL+J で ESC (2019/04/03)
-def subst C-S-J = C-J
-def subst C-J   = Esc
+# CTRL+J で Esc (2019/04/03)
+def subst C-*J   = Esc
 

@@ -88,8 +88,9 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 
 * のどか 設定ファイル: emacs-sub.nodoka
 * のどか ならでは機能。Karabinier-elements では調査・追求しない
-* Windows 標準の CTRL-CXVZ は残した
+* Windows 標準の CTRL-CXVZ は置き換えない
 * Windows 標準の CTRL-AF は置き換えてしまった
+* CTRL-W は Chrome などでタブを閉じるのに使っているので置き換えない
 * CTRL-AENPFB/DHK/Y で移動・削除・ペースト
 * 対象は、標準エディットコントロール/Notead/Thunderbird/Chrome
 

@@ -1,12 +1,13 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # emacs-sub.nodoka
-# bx19tri@gmail.com 2019/04/03
+# bx19tri@gmail.com 2019/04/25
 #
 # default2.nodoka が emacsedit.nodoka を include していたものを
 # 参考に作成。
 # CTRL+S,CXVZ を残したまま emcas ぽい移動・編集を実現
 # CTRL+A での全選択を残すのは諦めた。行頭への移動を優先
 # CTRL+F でのサーチも諦めた。F3 で代用する
+# CTRL+W/ も残す。馴染んでいない、CTRL+Wはタブ閉じに使いたい
 #
 # CTRL+SHIFT-A で、CTRL+A を入力できる。CTRL+SHIFT+A の入力はできなくなった
 # CTRL+SHIFT-F で、CTRL+F を入力できる。CTRL+SHIFT+F の入力はできなくなった
@@ -48,9 +49,9 @@ keymap	EmacsEdit : EmacsMove
  key C-H      = BackSpace		# BS
  key C-K      = $EmacsEdit/kill-line	# 行末まで削除
  key C-M      = Return			# RETURN
- key C-W      = C-X			# CUT
+#key C-W      = C-X			# CUT     (Chrome でタブを閉じるを優先)
  key C-Y      = C-V			# PASTE
- key C-Slash  = C-Z			# UNDO
+#key C-Slash  = C-Z			# UNDO
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # コントロールの設定

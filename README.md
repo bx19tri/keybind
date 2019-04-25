@@ -20,12 +20,12 @@ Windwos であれば、109 Keyboardを
 MacBook 2015 購入時に US Keyboard 版を購入。
 
 * のどかのようなソフトの調査が面倒
-* 単純なキーの入れ替えでは記号の再配置ができない
+* 単純なキーの入れ替えでは、109 から 104 への記号の再配置ができない
 * Control の位置変更は OS だけでできる
-* JP Keyboard には、1 の左にキーがない。リマップできても救えない
+* JP Keyboard には、1 の左にキーがない。リマップしても救えない
 
 が理由だった。  
-が、BackQuote と Esc の再配置がキーが足りないことで解決できずに
+が、BackQuote と Esc の再配置がキーが足りないために解決できずに
 悩み続ける。(PC で 104 を避けてきた理由そのもの)
 
 その後、remapped 109 on Windows で BackQuote の位置を妥協すれば、
@@ -108,10 +108,14 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 * CapsLock での IME制御をどうするか？を検討すべき
 * Mac 向け Google IME で、英数で漢字変換開始できるのか？
 
-## 追加リマップ候補
+## 追加検討項目
 * CTRL-M → Enter   
   emacs-edit 対象では実施済み。Excel では、Enter 扱いされない
 * CTRL-H → BS  
   emacs-edit 対象では実施済み。 
 * CTRL-I → Tab   
   CTRL-Tab というショートカットがあるのでやめたほうが良い。
+* CTRL-J → Esc を実施しないで同じ結果を得る方法を試す。  
+  vim/Google IME の設定変更で実施
+* Linux Desktop の場合はどうすればよいかの調査
+

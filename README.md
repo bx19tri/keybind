@@ -1,4 +1,4 @@
-# 各種環境での Key Bind Customize
+# Key Bind Customize の話
 
 [https://github.com/bx19tri/keybind](https://github.com/bx19tri/keybind)
 
@@ -41,7 +41,7 @@ US キーボードでは Caps/英数 となりシフトキーでの修飾が 109
 なるが、のどかならば逆転可能。
 
 (2019/04/03 追記)  
-のどかで CTRL+J を Esc に変更することはできた。
+のどかで CTRL+J を Esc に変更してみた。
 Google IME でも Esc が押されたと認識する。  
 Esc キーを使わない事に慣れることができれば、
 1 の左を BackQuote とする運用に変えることもできる。
@@ -55,6 +55,8 @@ emacs 風キーバインドで機能変更した CTRL-AF は候補となりう�
 (2019/04/24 追記)    
 AXTCon109 というファイル名を SandC104on109 に変更した。
 いろいろな変更を経て、AX 配列から乖離して 104 とほとんど同じになったのが理由。
+紆余曲折を経て、追加でエンターをバックスペースに入れ替えれば、
+変換が右Altより押しやすい以外は 104 でも同じ配列を実現できる状態となった。
 
 ## 今後どんなキーボードを選ぶか？
 
@@ -101,7 +103,15 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 ## macOS on MacBook US Keyboard
 
 * 未解決。Karabinier-elements を調査すべし
-* SandC(Space and Control)
+* SandC(Space and Control) をやりたい。SandS の情報あり
 * CTRL-J を Esc
 * CapsLock での IME制御をどうするか？を検討すべき
 * Mac 向け Google IME で、英数で漢字変換開始できるのか？
+
+## 追加リマップ候補
+* CTRL-M → Enter   
+  emacs-edit 対象では実施済み。Excel では、Enter 扱いされない
+* CTRL-H → BS  
+  emacs-edit 対象では実施済み。 
+* CTRL-I → Tab   
+  CTRL-Tab というショートカットがあるのでやめたほうが良い。

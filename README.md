@@ -135,11 +135,9 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 
 ## うんちく
 * Bill Joy が vi を作ってたときの端末のキーボード  
-  https://catonmat.net/why-vim-uses-hjkl-as-arrow-keys
-* 漢ならば 109 そのままで vi を使うべき！  
-  https://catonmat.net/why-vim-uses-hjkl-as-arrow-keys
+  [why-vim-uses-hjkl-keys](https://catonmat.net/why-vim-uses-hjkl-as-arrow-keys)  
+  なんと記号等はAscii配列ではない。漢ならば 109 そのままで vi を使うべき！  
 * 自分にはあんまり関係ないけど Symbolics のキーボードって凄いな。  
-  漢ならば 104/109 のコントロールを移動しちゃ駄目！
-  https://catonmat.net/why-emacs-uses-meta-keys
-
+  漢ならば 104/109 のコントロールキーを移動しちゃ駄目！  
+  [why-emacs-uses-meta-keys](https://catonmat.net/why-emacs-uses-meta-keys)
 

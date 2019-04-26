@@ -134,9 +134,9 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
   いろいろな環境で満足できる配列はなにか？どこを妥協すればよいのか？
 
 ## うんちく
-* Bill Joy が vi を作ってたときの端末のキーボード  
-  [why-vim-uses-hjkl-keys](https://catonmat.net/why-vim-uses-hjkl-as-arrow-keys)  
+* Bill Joy が vi を作ってたときの端末の[キーボード配列](https://upload.wikimedia.org/wikipedia/commons/a/a0/KB_Terminal_ADM3A.svg)  
   なんと記号等はAscii配列ではない。漢ならば 109 そのままで vi を使うべき！  
+  [why-vim-uses-hjkl-keys](https://catonmat.net/why-vim-uses-hjkl-as-arrow-keys)  
 * 自分にはあんまり関係ないけど Symbolics のキーボードって凄いな。  
   漢ならば 104/109 のコントロールキーを移動しちゃ駄目！  
   [why-emacs-uses-meta-key](https://catonmat.net/why-emacs-uses-meta-key)

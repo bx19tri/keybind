@@ -110,7 +110,8 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 
 ## macOS on MacBook US Keyboard
 
-* 未解決。Karabinier-elements を調査すべし
+* 未解決。Karabinier-elements を調査すべし。  
+  (めんどくさくて解決してないからほとんど macOS を起動していない)
 * SandC(Space and Control) をやりたい。SandS の情報あり
 * CTRL-J を Esc
 * CapsLock での IME制御をどうするか？を検討すべき
@@ -128,3 +129,14 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 * Linux Desktop の場合はどうすればよいかの調査
 * のどか でしか実現できない配列に縛られて、Windows にも縛られている。  
   いろいろな環境で満足できる配列はなにか？どこを妥協すればよいのか？
+
+## うんちく
+* Bill Joy が vi を作ってたときの端末のキーボード  
+  https://catonmat.net/why-vim-uses-hjkl-as-arrow-keys
+* 漢ならば 109 そのままで vi を使うべき！  
+  https://catonmat.net/why-vim-uses-hjkl-as-arrow-keys
+* 自分にはあんまり関係ないけど Symbolics のキーボードって凄いな。  
+  漢ならば 104/109 のコントロールを移動しちゃ駄目！
+  https://catonmat.net/why-emacs-uses-meta-keys
+
+

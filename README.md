@@ -139,5 +139,5 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
   なんと記号等はAscii配列ではない。漢ならば 109 そのままで vi を使うべき！  
 * 自分にはあんまり関係ないけど Symbolics のキーボードって凄いな。  
   漢ならば 104/109 のコントロールキーを移動しちゃ駄目！  
-  [why-emacs-uses-meta-keys](https://catonmat.net/why-emacs-uses-meta-keys)
+  [why-emacs-uses-meta-key](https://catonmat.net/why-emacs-uses-meta-key)
 

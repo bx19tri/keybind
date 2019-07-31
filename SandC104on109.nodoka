@@ -100,8 +100,10 @@ def subst  S-*半角/全角 = $TILDE
 # def subst ~S-Caps =  S-Caps
 # def subst  S-Caps = ~S-Caps
 
-# CTRL+J で Esc (2019/04/03)
+# CTRL+J で Esc   (2019/04/03)
+# CTRL+M で Enter (2019/07/31 Windows10 CMD.EXE)
 # 念の為、スペースキーの直右も Esc (2019/04/24)
-def subst C-*J   = Esc
+def subst C-*J = Esc
+def subst C-*M = Enter
 key *変換 = *Esc  
 

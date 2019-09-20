@@ -60,14 +60,16 @@ mod control += !!Space
 def option delay-of !!! = 20 
 
 # バッククオート＆チルダはTABの上でなくクオートの右（AX/NEWS流）
-# def subst ~S-*CloseBracket	= $GRAVE_ACCENT
-# def subst  S-*CloseBracket	= $TILDE
+def subst ~S-*CloseBracket	= $GRAVE_ACCENT
+def subst  S-*CloseBracket	= $TILDE
 #
-# 104と109でほぼ同じとするためには、
-# 上記を妥協して スペースの右に移動する必要がある。
-# 109では残しても良いが移動先になれるために移動元はEnterにしてしまう
-# 相対的に104と同じ場所にEnterがあることになる
-def subst *CloseBracket	= *Enter
+# ESC を CTRL-J で代用することに慣れた。
+# バッククオート＆チルダはTABの上でなれるようにする。
+# 相対的に104と同じ場所にEnterがあるようにする。
+# def subst *CloseBracket	= *Enter
+#
+# Let's note の全角キーの位置が異常。押しにくいので右端の
+# バッククオート＆チルダを再度有効とする。(2019/09/20)
 
 # 右シフトの左の「ろ」は、104on109.nodoka の最後で shift に
 # 変更されている。このファイル内ではなにもしていない。

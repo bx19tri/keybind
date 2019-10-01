@@ -101,6 +101,14 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 * CTRL-AENPFB/DHK/Y で移動・削除・ペースト
 * 対象は、標準エディットコントロール/Notead/Thunderbird/Chrome
 
+## RDP 先での設定ファイル
+
+* のどか 設定ファイル: RDP.nodoka
+* https://appletllc.com/web/nodoka-doc/CUSTOMIZE-ja.html  
+  キーボードLLフックに説明あり
+* キーの入れ替えはホスト側で実施
+* RDP先でも emacs 風キーバインド
+
 ## Google IME
 
 * Windows用設定ファイル: gime-keymap-esc.txt

@@ -1,0 +1,20 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# RDP.nodoka
+#
+# T.Eguchi (bx19tri@gmail.com)
+# 2019/10/01 
+#
+# 配列変更(109 to 104, SandC) はホスト側で実施したものがそのまま
+# 有効になる
+
+include "109.nodoka"			# 109 キーボード設定
+
+# C-AZXCV を残した subset emacs binding
+include	"emacs-sub.nodoka"
+
+# RDP 側で右シフトが効かなくなるのを以下で解消
+#
+def key E0RShift = E0-0x36
+mod shift += E0RShift
+key *E0RShift = *LShift
+

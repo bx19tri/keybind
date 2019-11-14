@@ -76,3 +76,8 @@ window  Thunderbird /:MozillaWindowClass$/ : EmacsEdit
 window  ChromeAddress /:Chrome_WidgetWin_1$/ : EmacsEdit
 window  ChromeBody    /:Chrome_RenderWidgetHostHWND$/ : EmacsEdit
 
+# Office
+window  WinWord     /WINWORD\.EXE/  : EmacsEdit
+window  Excel       /EXCEL\.EXE/    : EmacsEdit
+window  PowerPoint  /POWERPNT\.EXE/ : EmacsEdit
+

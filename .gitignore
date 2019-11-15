@@ -1,7 +1,5 @@
 .*~
 reference
 tmp
-*.html
-*.css
 mkhtml.sh
 

@@ -45,19 +45,23 @@ def subst    *英数	= *英数
 
 # Caps Lock を Control にするのは、default.nodoka にある。
 # default.nodokaのincludeをやめたのでここに追記。
-# mod control += 英数        # 英数を Control に
-# key *英数    = *LControl  # 〃
+# mod control += 英数         # 英数を Control に
+# key *英数	= *LControl   #	〃
 #
 # スペースをControlにしたので、上記をコメントアウトした
 
 # スペースをControlにできる。
 # On shot modifire という仕組みを使うと、
-# スペースだけ押して離すとスペースとして機能する
-# !!  スペースのリピート無
-# !!! スペースのリピート有
-# delay-of で指定した回数をリピート開始時に無効にできる
+# - スペースだけ押して離すとスペースとして機能する
+# - スペースを押しながら他のキーを押すと、CTRL+他のキーとなる
+# https://appletllc.com/web/nodoka-doc/CUSTOMIZE-ja.html#oneShotModifier
+#
+# リピート無
 mod control += !!Space
-def option delay-of !!! = 20
+#
+# リピート有(delay-of で指定した回数をリピート開始時に無効にできる)
+# mod control += !!!Space
+# def option delay-of !!! = 10
 
 # バッククオート＆チルダはTABの上でなくクオートの右（AX/NEWS流）
 def subst ~S-*CloseBracket	= $GRAVE_ACCENT

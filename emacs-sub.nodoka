@@ -81,3 +81,6 @@ window  WinWord     /WINWORD\.EXE/  : EmacsEdit
 window  Excel       /EXCEL\.EXE/    : EmacsEdit
 window  PowerPoint  /POWERPNT\.EXE/ : EmacsEdit
 
+# Skype
+window  Skype     /ApplicationFrameHost\.exe/ : EmacsEdit
+

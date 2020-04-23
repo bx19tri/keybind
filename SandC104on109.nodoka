@@ -38,8 +38,8 @@ def subst    *ひらがな	= *ひらがな
 def subst    *英数	= *英数
 
 # Escは、TABの上が好き。
-# key *半角/全角 = *Esc  
-# 
+# key *半角/全角 = *Esc
+#
 # US Keyboard にあわせて「バッククオート＆チルダ」にすることにした
 # ので、上記をコメントアウト。リマップは後半で実施(2019/04/23)
 
@@ -111,5 +111,5 @@ def subst  S-*半角/全角 = $TILDE
 # 念の為、スペースキーの直右も Esc (2019/04/24)
 def subst C-*J = Esc
 def subst C-*M = Enter
-key *変換 = *Esc  
+key *変換 = *Esc
 

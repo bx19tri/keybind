@@ -2,7 +2,7 @@
 
 [https://github.com/bx19tri/keybind](https://github.com/bx19tri/keybind)
 
-1980 年台後半に NEWS の Keyboard で vi を覚えた。
+1980 年台後半に Sony NEWS の Keyboard で vi を覚えた。
 
 * 記号はASCII配置
 * Esc は 1 の左、Tab の上

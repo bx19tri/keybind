@@ -80,6 +80,7 @@ window  ChromeBody    /:Chrome_RenderWidgetHostHWND$/ : EmacsEdit
 window  WinWord     /WINWORD\.EXE/  : EmacsEdit
 window  Excel       /EXCEL\.EXE/    : EmacsEdit
 window  PowerPoint  /POWERPNT\.EXE/ : EmacsEdit
+window  OutLook     /OUTLOOK\.EXE/  : EmacsEdit
 
 # Skype
 window  Skype     /ApplicationFrameHost\.exe/ : EmacsEdit

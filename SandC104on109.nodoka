@@ -45,13 +45,8 @@ def subst    *英数	= *英数
 
 # Caps Lock を Control にするのは、default.nodoka にある。
 # default.nodokaのincludeをやめたのでここに追記。
-<<<<<<< HEAD
 # mod control += 英数         # 英数を Control に
 # key *英数	= *LControl   #	〃
-=======
-# mod control += 英数        # 英数を Control に
-# key *英数    = *LControl  # 〃
->>>>>>> 4f75a11... Record local change
 #
 # スペースをControlにしたので、上記をコメントアウトした
 
@@ -63,14 +58,10 @@ def subst    *英数	= *英数
 #
 # リピート無
 mod control += !!Space
-<<<<<<< HEAD
 #
 # リピート有(delay-of で指定した回数をリピート開始時に無効にできる)
 # mod control += !!!Space
 # def option delay-of !!! = 10
-=======
-def option delay-of !!! = 20
->>>>>>> 4f75a11... Record local change
 
 # バッククオート＆チルダはTABの上でなくクオートの右（AX/NEWS流）
 def subst ~S-*CloseBracket	= $GRAVE_ACCENT

@@ -31,7 +31,7 @@ MacBook 2015 購入時に US Keyboard 版を購入。
 その後、remapped 109 on Windows で BackQuote の位置を妥協すれば、
 各環境でほぼ同じにできることに気がついた。
 
-BackQuote の解決とは非同期だが、Control は右小指より左右親指が
+BackQuote の解決とは非同期だが、Control は左小指より左右親指が
 より快適と思い変換・無変換を Control にリマップするようになった。  
 最終的に SandS(Space and Shift) をヒントとして
 SandC(Space and Control) にした。 
@@ -88,8 +88,8 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 | キー          | 割当                                     |
 |---------------|------------------------------------------|
 | CapsLock/Eisu | 英数/CapsLock (シフト状態反転)           |
-| CTRL+J        | Esc                                      | 
-| 右Win         | Esc                                      | 
+| CTRL+J        | Esc                                      |
+| 右Win         | Esc                                      |
 
 ## 編集領域で emacs 風キーバインド
 
@@ -99,7 +99,7 @@ AXTCon109 というファイル名を SandC104on109 に変更した。
 * Windows 標準の CTRL-AF は置き換えてしまった
 * CTRL-W は Chrome などでタブを閉じるのに使っているので置き換えない
 * CTRL-AENPFB/DHK/Y で移動・削除・ペースト
-* 対象は、標準エディットコントロール/Notead/Thunderbird/Chrome
+* 対象は、標準エディットコントロール/Notead/Thunderbird/Chrome/Excel/Word
 
 ## RDP 先での設定ファイル
 
